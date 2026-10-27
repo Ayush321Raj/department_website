@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CS Department Student Dashboard">
+    <title>CS Department Portal — Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">🎓</span>
+            CS Department
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <ul class="navbar-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#" id="navLogout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <div class="page-header">
+        <h1>Student Dashboard</h1>
+        <p>Manage and view your academic profile</p>
+    </div>
+
+    <!-- ========== DASHBOARD CONTENT ========== -->
+    <main class="dashboard-container" id="dashboardContainer">
+        <div class="dashboard-card">
+            <div class="dashboard-header">
+                <h2>Welcome, <span id="dashHeadingName">Student</span>! 👋</h2>
+                <p>Logged-in Student Profile</p>
+            </div>
+
+            <div class="dashboard-body">
+                <!-- Status notification message -->
+                <div id="dashboardMessage" class="message"></div>
+
+                <div class="info-row">
+                    <span class="info-label">Full Name:</span>
+                    <span class="info-value" id="userName">Loading...</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Email Address:</span>
+                    <span class="info-value" id="userEmail">Loading...</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Department:</span>
+                    <span class="info-value" id="userDept">Loading...</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Gender:</span>
+                    <span class="info-value" id="userGender">Loading...</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Phone Number:</span>
+                    <span class="info-value" id="userPhone">Loading...</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Account Status:</span>
+                    <span class="info-value" style="color: var(--success); font-weight: 600;">Active Student</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="info-label">Registered On:</span>
+                    <span class="info-value" id="userJoined">Loading...</span>
+                </div>
+
+                <button id="logoutBtn" class="btn-logout">Logout from Account</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <p>&copy; 2025 Department of Computer Science. All rights reserved.</p>
+        <p>IWT Laboratory Project — MCA Program</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
